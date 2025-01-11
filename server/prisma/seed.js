@@ -13,6 +13,7 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'JOB_SEEKER',
       isSubscribed: true,
+      photo: 'https://example.com/uploads/jobseeker0.jpg',
       createdAt: '2024-05-23T00:00:00Z',
     },
     {
@@ -20,6 +21,7 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'COMPANY',
       isSubscribed: true,
+      photo: 'https://example.com/uploads/company1.jpg',
       createdAt: '2024-05-24T00:00:00Z',
     },
     {
@@ -27,6 +29,7 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'JOB_SEEKER',
       isSubscribed: false,
+      photo: 'https://example.com/uploads/jobseeker2.jpg',
       createdAt: '2024-05-25T00:00:00Z',
     },
     {
@@ -34,6 +37,7 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'ADMIN',
       isSubscribed: true,
+      photo: 'https://example.com/uploads/admin3.jpg',
       createdAt: '2024-05-26T00:00:00Z',
     },
     {
@@ -41,6 +45,7 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'COMPANY',
       isSubscribed: true,
+      photo: 'https://example.com/uploads/company4.jpg',
       createdAt: '2024-05-27T00:00:00Z',
     },
     {
@@ -48,35 +53,8 @@ async function main() {
       password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
       role: 'SUPER_ADMIN',
       isSubscribed: true,
+      photo: 'https://example.com/uploads/superadmin.jpg',
       createdAt: '2024-05-28T00:00:00Z',
-    },
-    {
-      email: 'jobseeker5@outlook.com',
-      password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
-      role: 'JOB_SEEKER',
-      isSubscribed: true,
-      createdAt: '2024-05-29T00:00:00Z',
-    },
-    {
-      email: 'company6@corp.com',
-      password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
-      role: 'COMPANY',
-      isSubscribed: false,
-      createdAt: '2024-05-30T00:00:00Z',
-    },
-    {
-      email: 'jobseeker7@yahoo.com',
-      password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
-      role: 'JOB_SEEKER',
-      isSubscribed: false,
-      createdAt: '2024-05-31T00:00:00Z',
-    },
-    {
-      email: 'admin8@platform.com',
-      password: '$2a$04$YcD6IeJ/F2gcI6c9yArsqOu0wPE1cxO3BGLuTOBZpj248Rtpp/zMq',
-      role: 'ADMIN',
-      isSubscribed: true,
-      createdAt: '2024-06-01T00:00:00Z',
     },
   ];
 
@@ -89,6 +67,7 @@ async function main() {
         password: user.password,
         role: user.role,
         isSubscribed: user.isSubscribed,
+        photo: user.photo,
         createdAt: new Date(user.createdAt),
       },
     });
@@ -104,6 +83,7 @@ async function main() {
         'Looking for an experienced developer to build and maintain our e-commerce platform. Must have experience with React, Node.js, and AWS.',
       price: 120,
       ownerEmail: 'company1@example.com',
+      photo: 'https://example.com/uploads/gig1.jpg',
       createdAt: '2024-05-24T00:00:00Z',
     },
     {
@@ -112,6 +92,7 @@ async function main() {
         'Seeking a designer to improve user experience and interface design for our web application.',
       price: 90,
       ownerEmail: 'company1@example.com',
+      photo: 'https://example.com/uploads/gig2.jpg',
       createdAt: '2024-05-25T00:00:00Z',
     },
     {
@@ -120,6 +101,7 @@ async function main() {
         'Seeking an experienced content writer to create engaging technical articles and blog posts about emerging technologies.',
       price: 45,
       ownerEmail: 'company4@business.com',
+      photo: 'https://example.com/uploads/gig3.jpg',
       createdAt: '2024-05-26T00:00:00Z',
     },
     {
@@ -128,55 +110,8 @@ async function main() {
         'Seeking a React developer to build responsive and interactive user interfaces.',
       price: 85,
       ownerEmail: 'company4@business.com',
+      photo: 'https://example.com/uploads/gig4.jpg',
       createdAt: '2024-05-27T00:00:00Z',
-    },
-    {
-      title: 'Mobile App Developer - iOS Focus',
-      description:
-        'Looking for an iOS developer to create a new fitness tracking app. Swift experience required.',
-      price: 110,
-      ownerEmail: 'company6@corp.com',
-      createdAt: '2024-05-28T00:00:00Z',
-    },
-    {
-      title: 'Digital Marketing Specialist',
-      description:
-        'Need a marketing specialist to manage social media campaigns and improve online presence.',
-      price: 65,
-      ownerEmail: 'company1@example.com',
-      createdAt: '2024-05-29T00:00:00Z',
-    },
-    {
-      title: 'Database Administrator',
-      description:
-        'Looking for a DBA to optimize and maintain our PostgreSQL databases.',
-      price: 100,
-      ownerEmail: 'company4@business.com',
-      createdAt: '2024-05-30T00:00:00Z',
-    },
-    {
-      title: 'DevOps Engineer',
-      description:
-        'Need a DevOps engineer to implement CI/CD pipelines and manage cloud infrastructure.',
-      price: 130,
-      ownerEmail: 'company6@corp.com',
-      createdAt: '2024-05-31T00:00:00Z',
-    },
-    {
-      title: 'Graphic Designer for Brand Identity Project',
-      description:
-        'Need a creative graphic designer to develop complete brand identity including logo, color scheme, and style guide.',
-      price: 75,
-      ownerEmail: 'company1@example.com',
-      createdAt: '2024-06-01T00:00:00Z',
-    },
-    {
-      title: 'Backend Developer - Python/Django',
-      description:
-        'Looking for a backend developer with strong Python and Django experience to build robust APIs.',
-      price: 95,
-      ownerEmail: 'company4@business.com',
-      createdAt: '2024-06-02T00:00:00Z',
     },
   ];
 
@@ -190,6 +125,7 @@ async function main() {
           description: gig.description,
           price: gig.price,
           ownerId: ownerId,
+          photo: gig.photo,
           createdAt: new Date(gig.createdAt),
         },
       });

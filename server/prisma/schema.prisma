@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -21,13 +15,14 @@ enum Role {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  password  String
-  role      Role
-  isSubscribed Boolean @default(false) // True for subscribed, False for unsubscribed
-  gigs      Gig[]     @relation("UserGigs") // A user (company or job-seeker) can have multiple gigs
-  createdAt DateTime  @default(now())
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  password     String
+  role         Role
+  isSubscribed Boolean  @default(false) // True for subscribed, False for unsubscribed
+  photo        String?  // URL of the user's photo (optional)
+  gigs         Gig[]    @relation("UserGigs") // A user (company or job-seeker) can have multiple gigs
+  createdAt    DateTime @default(now())
 }
 
 model Gig {
@@ -37,5 +32,6 @@ model Gig {
   price       Float
   ownerId     Int
   owner       User     @relation("UserGigs", fields: [ownerId], references: [id]) // Owner can be a company or job-seeker
+  photo       String?  // URL of the gig's photo (optional)
   createdAt   DateTime @default(now())
 }
